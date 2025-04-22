@@ -14,3 +14,14 @@ fun main() {
     println("Joaco Ardevol y hoy es 22 de abril de 2025")
     println("Hello kotline")
 }
+fun tipos_de_datos() {
+    val nombre: String = "Joaco"
+    val edad: Int = 16
+    val altura: Double = 1.75
+    val esEstudiante: Boolean = true
+    
+    println("Nombre: $nombre")
+    println("Edad: $edad")
+    println("Altura: $altura")
+    println("Es estudiante: $esEstudiante")
+}
