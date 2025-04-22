@@ -3,16 +3,12 @@
  */
 package org.example
 
-class App {
-    val greeting: String
-        get() {
-            return "Hello kotline!"
-        }
-}
 
 fun main() {
     println("Joaco Ardevol y hoy es 22 de abril de 2025")
     println("Hello kotline")
+    tipos_de_datos()
+    calcularAreaRectangulo()
 }
 fun tipos_de_datos() {
     val nombre: String = "Joaco"
@@ -25,3 +21,18 @@ fun tipos_de_datos() {
     println("Altura: $altura")
     println("Es estudiante: $esEstudiante")
 }
+
+fun calcularAreaRectangulo() {
+    val base: Double = 5.0
+    val altura: Double = 3.0
+    val area: Double = base * altura
+    
+    println("Base: $base")
+    println("Altura: $altura")
+    println("Área del rectángulo: $area")
+
+
+
+}
+
+   
