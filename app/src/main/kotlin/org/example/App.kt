@@ -6,11 +6,20 @@ package org.example
 
 fun main() {
     println("Joaco Ardevol y hoy es 22 de abril de 2025")
-    println("Hello kotline")
-    tipos_de_datos()
+    println("Hello Kotlin")
+    
+    tiposDeDatos()
     calcularAreaRectangulo()
+
+    // Ejemplo de uso de las nuevas funciones
+    val numero = 7
+    println("El número $numero es: ${esParOImpar(numero)}")
+    
+    val otroNumero = -5
+    println("El número $otroNumero es: ${determinarSigno(otroNumero)}")
 }
-fun tipos_de_datos() {
+
+fun tiposDeDatos() {
     val nombre: String = "Joaco"
     val edad: Int = 16
     val altura: Double = 1.75
@@ -30,9 +39,19 @@ fun calcularAreaRectangulo() {
     println("Base: $base")
     println("Altura: $altura")
     println("Área del rectángulo: $area")
-
-
-
 }
 
-   
+fun esParOImpar(numero: Int): String {
+    return when {
+        numero % 2 == 0 -> "Par"
+        else -> "Impar"
+    }
+}
+
+fun determinarSigno(numero: Int): String {
+    return when {
+        numero > 0 -> "Positivo"
+        numero < 0 -> "Negativo"
+        else -> "Cero"
+    }
+}
