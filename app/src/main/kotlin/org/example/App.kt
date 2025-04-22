@@ -11,5 +11,6 @@ class App {
 }
 
 fun main() {
-    println(App().greeting)
+    println("Joaco Ardevol y hoy es 22 de abril de 2025")
+    println("Hello kotline")
 }
