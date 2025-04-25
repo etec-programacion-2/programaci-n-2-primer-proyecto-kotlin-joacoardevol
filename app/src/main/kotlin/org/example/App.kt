@@ -1,33 +1,46 @@
 package org.example
 
-import java.util.Scanner
-
 fun main() {
     println("Joaco Ardevol y hoy es 22 de abril de 2025")
     println("Hello Kotlin")
-    
-    tiposDeDatos()
+
+    // Mostrar los tipos de datos y el área del rectángulo
+    mostrarTiposDeDatos()
     calcularAreaRectangulo()
 
-    // Usando Scanner para recibir la entrada del usuario
-    val scanner = Scanner(System.`in`)
-    
-    println("Introduce un número entero:")
-    val numeroUsuario = scanner.nextInt()  // Capturamos un número entero
-    
-    // Mostramos el resultado de las funciones
-    println("El número $numeroUsuario es: ${esParOImpar(numeroUsuario)} y ${determinarSigno(numeroUsuario)}")
-    
-    // Mostrar los números pares del 2 al 20 usando los tres tipos de loops
-    mostrarNumerosPares()
+    // Ejemplo de uso de las nuevas funciones
+    val numero = 7
+    println("El número $numero es: ${esParOImpar(numero)}")
+
+    val otroNumero = -5
+    println("El número $otroNumero es: ${determinarSigno(otroNumero)}")
+
+    // Comprobamos varios números
+    esParOImpar(7)
+    esParOImpar(12)
+    esParOImpar(50)
+    esParOImpar(-3)
+    esParOImpar(0)
+
+    // Determinamos el tipo de número
+    println("${determinarTipoDeNumero(5)}")
+    println(determinarTipoDeNumero(-3))
+    println(determinarTipoDeNumero(0))
+
+    // Mostrar los números del 1 al 10 usando los tres tipos de loops
+    mostrarNumerosConFor()
+    println()
+    mostrarNumerosConWhile()
+    println()
+    mostrarNumerosConDoWhile()
 }
 
-fun tiposDeDatos() {
-    val nombre: String = "Joaco"
+fun mostrarTiposDeDatos() {
+    val nombre: String = "Dano"
     val edad: Int = 16
     val altura: Double = 1.75
     val esEstudiante: Boolean = true
-    
+
     println("Nombre: $nombre")
     println("Edad: $edad")
     println("Altura: $altura")
@@ -35,18 +48,18 @@ fun tiposDeDatos() {
 }
 
 fun calcularAreaRectangulo() {
-    val base: Double = 5.0
-    val altura: Double = 3.0
-    val area: Double = base * altura
-    
-    println("Base: $base")
-    println("Altura: $altura")
-    println("Área del rectángulo: $area")
+    val ancho = 25
+    val alto = 5
+    val area = ancho * alto
+    println("El ancho del rectángulo es $ancho, su altura es $alto y su área es $area")
 }
 
 // Función para determinar si un número es par o impar
-fun esParOImpar(numero: Int): String {
-    return if (numero % 2 == 0) "Par" else "Impar"
+fun esParOImpar(numero: Int) {
+    when (numero % 2) {
+        0 -> println("El número $numero es par")
+        else -> println("El número $numero es impar")
+    }
 }
 
 // Función para determinar si un número es positivo, negativo o cero
@@ -58,30 +71,39 @@ fun determinarSigno(numero: Int): String {
     }
 }
 
-// Función que muestra los números pares del 2 al 20 usando diferentes tipos de loops
-fun mostrarNumerosPares() {
-    // Usando un loop 'for'
-    println("Usando loop for:")
-    for (i in 2..20 step 2) {  // 'step 2' incrementa de 2 en 2
-        print("$i ")
+// Función para determinar si un número es positivo, negativo o cero
+fun determinarTipoDeNumero(numero: Int): String {
+    return when {
+        numero > 0 -> "El número es positivo"
+        numero < 0 -> "El número es negativo"
+        else -> "El número es cero"
     }
-    println()
-    
-    // Usando un loop 'while'
-    println("Usando loop while:")
-    var i = 2
-    while (i <= 20) {
-        print("$i ")
-        i += 2
+}
+
+// Función que muestra los números del 1 al 10 usando un loop 'for'
+fun mostrarNumerosConFor() {
+    println("Números del 1 al 10 usando for:")
+    for (i in 1..10) {
+        println(i)
     }
-    println()
-    
-    // Usando un loop 'do-while' (simulado)
-    println("Usando loop do-while:")
-    i = 2
+}
+
+// Función que muestra los números del 1 al 10 usando un loop 'while'
+fun mostrarNumerosConWhile() {
+    println("Números del 1 al 10 usando while:")
+    var i = 1
+    while (i <= 10) {
+        println(i)
+        i++
+    }
+}
+
+// Función que muestra los números del 1 al 10 usando un loop 'do-while'
+fun mostrarNumerosConDoWhile() {
+    println("Números del 1 al 10 usando do-while:")
+    var i = 1
     do {
-        print("$i ")
-        i += 2
-    } while (i <= 20)
-    println()
+        println(i)
+        i++
+    } while (i <= 10)
 }
