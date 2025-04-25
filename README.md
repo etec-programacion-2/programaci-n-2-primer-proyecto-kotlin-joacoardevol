@@ -1,8 +1,8 @@
 # Proyecto de Aprendizaje de Kotlin
 
 ## Información del Alumno
-- Nombre: [Tu Nombre]
-- Apellido: [Tu Apellido]
+- Nombre: [Joaco]
+- Apellido: [Ardevol]
 
 Este proyecto está diseñado para aprender Kotlin de manera progresiva, implementando funcionalidades paso a paso. Cada paso debe ser subido al repositorio antes de continuar con el siguiente.
 
