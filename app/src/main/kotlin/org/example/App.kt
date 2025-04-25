@@ -1,19 +1,19 @@
 package org.example
 
+import java.util.Scanner
+
 fun main() {
     println("Joaco Ardevol y hoy es 22 de abril de 2025")
     println("Hello Kotlin")
     
     tiposDeDatos()
     calcularAreaRectangulo()
-
     val scanner = Scanner(System.`in`)
     
     println("Introduce un número entero:")
     val numeroUsuario = scanner.nextInt()
     
     println("El número $numeroUsuario es: ${esParOImpar(numeroUsuario)} y ${determinarSigno(numeroUsuario)}")
-
     // Mostrar los números pares del 2 al 20 usando los tres tipos de loops
     mostrarNumerosPares()
 }
@@ -62,7 +62,7 @@ fun mostrarNumerosPares() {
         print("$i ")
     }
     println()
-
+    
     // Usando un loop 'while'
     println("Usando loop while:")
     var i = 2
@@ -71,7 +71,7 @@ fun mostrarNumerosPares() {
         i += 2
     }
     println()
-
+    
     // Usando un loop 'do-while' (simulado)
     println("Usando loop do-while:")
     i = 2
