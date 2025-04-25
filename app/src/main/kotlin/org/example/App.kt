@@ -8,12 +8,16 @@ fun main() {
     
     tiposDeDatos()
     calcularAreaRectangulo()
+
+    // Usando Scanner para recibir la entrada del usuario
     val scanner = Scanner(System.`in`)
     
     println("Introduce un número entero:")
-    val numeroUsuario = scanner.nextInt()
+    val numeroUsuario = scanner.nextInt()  // Capturamos un número entero
     
+    // Mostramos el resultado de las funciones
     println("El número $numeroUsuario es: ${esParOImpar(numeroUsuario)} y ${determinarSigno(numeroUsuario)}")
+    
     // Mostrar los números pares del 2 al 20 usando los tres tipos de loops
     mostrarNumerosPares()
 }
