@@ -7,12 +7,12 @@ fun main() {
     tiposDeDatos()
     calcularAreaRectangulo()
 
-    // Ejemplo de uso de las nuevas funciones
-    val numero = 7
-    println("El número $numero es: ${esParOImpar(numero)}")
+    val scanner = Scanner(System.`in`)
     
-    val otroNumero = -5
-    println("El número $otroNumero es: ${determinarSigno(otroNumero)}")
+    println("Introduce un número entero:")
+    val numeroUsuario = scanner.nextInt()
+    
+    println("El número $numeroUsuario es: ${esParOImpar(numeroUsuario)} y ${determinarSigno(numeroUsuario)}")
 
     // Mostrar los números pares del 2 al 20 usando los tres tipos de loops
     mostrarNumerosPares()
